@@ -117,16 +117,28 @@
       <p>작성일</p>
     </div>
   </div>
+
+  <!--
+    반복문
+  -->
+  <% if(data.length>0){ %>
+    <% for (var i = 0; i < data.length;i++){ %>
+      <div class="list-content-element">
+        <div class="list-content-title">
+          <p><%= data[i].title %></p>
+        </div>
+        <div class="list-content-writer">
+          <p>관리자</p>
+          <p><%= data[i].date %></p>
+        </div>
+      </div>
+    <% } %> 
+  <% }else{ %>
+    <script>
+      alert('데이터가 없습니다.')
+    </script> 
+  <% } %>
   
-  <div class="list-content-element">
-    <div class="list-content-title">
-      <p>서류</p>
-    </div>
-    <div class="list-content-writer">
-      <p>관리자</p>
-      <p>2022.03.02</p>
-    </div>
-  </div>
 
 </div>
 

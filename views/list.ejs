@@ -79,8 +79,9 @@
     <div class="contents">
         <div class="title">
             
-            <h2>체육분과</h2>
-            <sup class="total">12</sup>
+
+            <h2><%= data[0].category %></h2>
+            <sup class="total"><%= data.lenght+1 %></sup>
         </div>
         <!--상단 제목 ~ 하단 Load more-->
         <div class="project-cards-container">
@@ -88,12 +89,12 @@
                
                 <!--프로젝트 게시물 전체-->
                 <div class="project-cards">
-                    <% for (var i = 0; i< 5;i++){ %>
+                    <% for (var i = 0; i < data.length;i++){ %>
                     <!-- 프로젝트 게시물 개별 -> 한번에 6개 보여줌-->
                         <div class="project-card-component">
                             <a class="project-views" href="">
-                                <img src="../images/체육분과/5체육분과.jpg" alt="" class="project-thumbnail">
-                                <p class="name">동아리명</p>
+                                <img src="<%=data[i].imgname%>" alt="" class="project-thumbnail">
+                                <p class="name"><%= data[i].title %></p>
                             </a>
                             <div class="links">
                                 <div class="link-item">
@@ -103,80 +104,9 @@
                         </div>  
                         <% } %>      
                 </div>
-               
-            
-            <div class="load-more">
-                <div class="load-more-btn">
-                    <p>Load more</p>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
         </div>
     </div>
-                <!--
-
                 
-                <div class="project-card-component">
-                    <a href="" class="project-views">
-                        <img src="../images/project.png" alt="" class="project-thumbnail">
-                        <p class="name">프로젝트 제목</p>
-                        <p class="time">1기</p>
-                    </a>
-                    <div class="links">
-                        <div class="link-item">
-                            <p>Go to Page</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card-component">
-                    <a href="" class="project-views">
-                        <img src="../images/project.png" alt="" class="project-thumbnail">
-                        <p class="name">프로젝트 제목</p>
-                        <p class="time">1기</p>
-                    </a>
-                    <div class="links">
-                        <div class="link-item">
-                            <p>Go to Page</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card-component">
-                    <a href="" class="project-views">
-                        <img src="../images/project.png" alt="" class="project-thumbnail">
-                        <p class="name">프로젝트 제목</p>
-                        <p class="time">1기</p>
-                    </a>
-                    <div class="links">
-                        <div class="link-item">
-                            <p>Go to Page</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card-component">
-                    <a href="" class="project-views">
-                        <img src="../images/project.png" alt="" class="project-thumbnail">
-                        <p class="name">프로젝트 제목</p>
-                        <p class="time">1기</p>
-                    </a>
-                    <div class="links">
-                        <div class="link-item">
-                            <p>Go to Page</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card-component">
-                    <a href="" class="project-views">
-                        <img src="../images/project.png" alt="" class="project-thumbnail">
-                        <p class="name">프로젝트 제목</p>
-                        <p class="time">1기</p>
-                    </a>
-                    <div class="links">
-                        <div class="link-item">
-                            <p>Go to Page</p>
-                        </div>
-                    </div>
-                </div>
-                -->
                 
  
 

@@ -4,6 +4,9 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const dotenv = require('dotenv');
+
+
 
 // 메인 홈페이지
 var indexRouter = require('./routes/index');

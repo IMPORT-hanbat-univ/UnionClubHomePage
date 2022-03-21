@@ -29,15 +29,19 @@
       <button class="back-color" >"</button>
       <button class="back-color symbol-color">링크</button>
       <button  class="back-color" id="btnImage">
-      <button  class="back-color" id="btnImage"><i style="font-size: 20px;" class="far fa-image"></i></button>
-      <input  class="image-selector" id="imgSelector" type="file"/>
-      </button>
+        <button  class="back-color" id="btnImage">
+          <i style="font-size: 20px; z-index: 10;" class="far fa-image"></i>
+          <input class="image-selector back-color" id="imgSelector" type="file">
+        </button>
     </div>
       <div class="write-category">
         <select class="back-color symbol-color" name=category onchange="selectBoxChange(this.value)">
           <option value="" selected disabled hidden >카테고리</option>
           <option value="document">서류/양식</option>
           <option value="report">동아리활동보고</option>
+        </select>
+        <select id="clubname">
+          <option>동아리명</option>
         </select>
       </div>
     
@@ -138,7 +142,8 @@
   var selectBoxChange = function(value){
       console.log(value);
       category = value;
-    }
+
+  }
   $('.complete-button').click(function(){
     var title = $('#title').val();
     var content = $('#editor').html();

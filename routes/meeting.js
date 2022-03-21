@@ -4,7 +4,10 @@ var router = express.Router();
 
 /* GET /question */
 router.get('/', function(req, res) {
-    res.render('secondlist');
-});
+    db.get().collection('meeting').find().toArray(function(err, resu) {
+        console.log(resu);
+        res.render('secondlist', {data : resu});
+    });
+  });
 
 module.exports = router;
