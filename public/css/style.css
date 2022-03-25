@@ -480,6 +480,13 @@ pre {
   border-top: 1px solid rgba(204, 204, 204, 0.15);
   margin: 1% 0 1% 0;
 }
+.content-img{
+  width: 80%;
+  margin: auto;
+}
+.content-img img{
+  width: 100%;
+}
 #contentBody {
   padding: 0 1% 0 1%;
   margin-bottom: 1%;
@@ -1313,8 +1320,19 @@ margin-left: 200px;
   float: right;
   width: 150px;
 }
+.list-content-element{
+  position: relative;
+}
 .list-content-element:hover{
   background-color: #ebebeb;
+}
+.list-content-element i{
+  position: absolute;
+  top: 18px;
+  right: 40px;
+}
+.list-content-element i:hover{
+  cursor: pointer;
 }
 
 

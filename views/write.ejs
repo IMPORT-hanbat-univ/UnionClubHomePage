@@ -99,7 +99,7 @@
   function uploadImage(file) {
     var formData = new FormData();
 
-    formData.append('image', file);
+    formData.append('hwpfile', file);
 
     $.ajax({
        url: "/upload",

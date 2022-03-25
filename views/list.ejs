@@ -80,8 +80,8 @@
         <div class="title">
             
 
-            <h2><%= data[0].category %></h2>
-            <sup class="total"><%= data.lenght+1 %></sup>
+            <h2><%= data[1].category %></h2>
+            <sup class="total"><%= data[0].totalnum %></sup>
         </div>
         <!--상단 제목 ~ 하단 Load more-->
         <div class="project-cards-container">
@@ -89,20 +89,22 @@
                
                 <!--프로젝트 게시물 전체-->
                 <div class="project-cards">
-                    <% for (var i = 0; i < data.length;i++){ %>
+                    <% for (var i = 1; i < data.length;i++){ %>
                     <!-- 프로젝트 게시물 개별 -> 한번에 6개 보여줌-->
-                        <div class="project-card-component">
-                            <a class="project-views" href="">
-                                <img src="<%=data[i].imgname%>" alt="" class="project-thumbnail">
-                                <p class="name"><%= data[i].title %></p>
+                      <div class="project-card-component">
+                            <a class="project-views" href="<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>">
+                              <div style="height: 500px; border-bottom: 1px solid black;">
+                                <img src="<%=data[i].imgsrc%>" alt="" class="project-thumbnail">
+                              </div>
+                              <p class="name"><%= data[i].title %></p>
                             </a>
                             <div class="links">
                                 <div class="link-item">
                                     <p>Go to Page</p>
                                 </div>
                             </div>
-                        </div>  
-                        <% } %>      
+                      </div>  
+                      <% } %>      
                 </div>
         </div>
     </div>

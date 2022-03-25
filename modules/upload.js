@@ -14,10 +14,7 @@ const upload = multer({
             let extension = path.extname(file.originalname)
             cb(null, 'unionclub/'+Date.now().toString()+extension);
         }
-    }),
-    limits: {
-        fileSize: 1024 * 1024 * 10
-    }
+    })
 });
 
 module.exports = upload;

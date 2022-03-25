@@ -4,7 +4,7 @@ var upload = require('../modules/upload');
 var router = express.Router();
 
 /* POST /image */
-router.post('/image', upload.single('image'), function(req, res) {
+router.post('/hwpfile', upload.single('hwpfile'), function(req, res) {
     res.send(JSON.stringify(req.file));
 });
 

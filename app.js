@@ -45,6 +45,7 @@ var editRouter = require('./routes/edit');
 // 파일 업로드
 var fileRouter = require('./routes/file');
 
+
 var app = express();
 
 // view engine setup
@@ -76,6 +77,7 @@ app.use('/add', addRouter);
 app.use('/delete', deleteRouter);
 app.use('/edit', editRouter);
 app.use('/file', fileRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
