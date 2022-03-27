@@ -1,7 +1,8 @@
 const multer = require('multer'); 
 const multerS3 = require('multer-s3'); 
 const aws = require('aws-sdk'); 
-aws.config.loadFromPath('/Users/jinmin/Desktop/awsconfig.json'); 
+const path = require('path');
+aws.config.loadFromPath('./config/awsconfig.json'); 
 const s3 = new aws.S3();
 
 const upload = multer({
@@ -12,7 +13,7 @@ const upload = multer({
         acl: 'public-read',
         key: function(req, file, cb) {
             let extension = path.extname(file.originalname)
-            cb(null, 'unionclub/'+Date.now().toString()+extension);
+            cb(null, 'unionclub/files/'+Date.now().toString()+extension);
         }
     })
 });
