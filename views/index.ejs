@@ -52,7 +52,7 @@
             $('.topMenu').css('display','block');
             $('.close-menu').css('display','block');
             $('.open-menu').css('display','none');
-            $('.topMenu-ul').css('background','black');
+            $('.topMenu-ul').css('background','white');
             $('.executive-contents').css('opacity','0.5');
             $('.footer').css('opacity','0.5');
         }
@@ -81,6 +81,7 @@
         <div class="index-introudce-union-comment">
             <h2>SKETCH</h2>
             <p>안녕하십니까! 국립한밭대학교 제 37대 총동아리 연합회 SKETCH입니다.</p>
+            
             <h3>팀 이름 & 로고</h3>
             <p>SKETCH는 '밑그림'이라는 의미이며 로고에는 기린을 사용하고 있습니다.</p>
             <p>팀 이름에는 총동아리연합회 소속 중앙동아리들이 자신들의 색을 마음껏 칠할 수 있는 밑그림이 되자는 의미를 담고 있고,</p>
@@ -98,16 +99,32 @@
             <div class="index-intorduce-club-title">
                 <h2>공연분과</h2>
             </div>
-            <div class="w3-content w3-section" style="max-width:400px">
+            <div class="index-introduce-club-img" style="max-width:400px">
                 <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/performance1.jpg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/asound.jpg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/blackstone.jpg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/bpm.jpeg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/octave.jpg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/tenz.jpg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/whitenoise.jpeg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/wicked.jpg" style="width:100%">
-                <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/hyeonam.jpeg" style="width:100%">
+                <a href="<%= process.env.SERVER_HOST %>/post/1?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/asound.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/2?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/blackstone.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/3?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/bpm.jpeg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/4?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/octave.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/5?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/tenz.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/6?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/whitenoise.jpeg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/7?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/wicked.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/8?category=performance">
+                    <img class="performanceSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/performance/hyeonam.jpeg" style="width:100%">
+                </a>
             </div>
         </div>
 
@@ -116,12 +133,20 @@
             <div class="index-intorduce-club-title">
                 <h2>봉사분과</h2>
             </div>
-            <div class="w3-content w3-section" style="max-width:400px">
+            <div class="index-introduce-club-img" style="max-width:400px">
                 <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/volunteer1.jpg" style="width:100%">
-                <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/crocodylidae.jpg" style="width:100%">
-                <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/imaginary.jpg" style="width:100%">
-                <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/rotaract.jpg" style="width:100%">
-                <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/saemaul.jpg" style="width:100%">
+                <a href="<%= process.env.SERVER_HOST %>/post/1?category=volunteer">
+                    <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/crocodylidae.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/2?category=volunteer">
+                    <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/imaginary.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/3?category=volunteer">
+                    <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/rotaract.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/4?category=volunteer">
+                    <img class="volunteerSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/volunteer/saemaul.jpg" style="width:100%">
+                </a>
             </div>
             
         </div>
@@ -131,17 +156,35 @@
             <div class="index-intorduce-club-title">
                 <h2>전시교양분과</h2>
             </div>
-            <div class="w3-content w3-section" style="max-width:400px">
+            <div class="index-introduce-club-img" style="max-width:400px">
                 <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/art1.jpg" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/dawa.jpg" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/import.png" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/masterdrone.jpg" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/myomi.png" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/photo.png" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/rgb.jpg" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/slate.jpg" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/teammiracle.jpg" style="width:100%">
-                <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/thefilm.jpeg" style="width:100%">
+                <a href="<%= process.env.SERVER_HOST %>/post/1?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/dawa.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/2?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/import.png" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/3?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/masterdrone.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/4?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/myomi.png" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/5?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/photo.png" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/6?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/rgb.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/7?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/slate.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/8?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/teammiracle.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/9?category=art">
+                    <img class="artSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/art/thefilm.jpeg" style="width:100%">
+                </a>
             </div>
             
         </div>
@@ -151,13 +194,23 @@
             <div class="index-intorduce-club-title">
                 <h2>종교분과</h2>
             </div>
-            <div class="w3-content w3-section" style="max-width:400px">
+            <div class="index-introduce-club-img" style="max-width:400px">
                 <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/religion1.jpg" style="width:100%">
-                <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/ccc.png" style="width:100%">
-                <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/dfc.jpg" style="width:100%">
-                <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/ivf.jpg" style="width:100%">
-                <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/jdm.jpg" style="width:100%">
-                <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/veritas.jpg" style="width:100%">
+                <a href="<%= process.env.SERVER_HOST %>/post/1?category=religion">
+                    <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/ccc.png" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/2?category=religion">
+                    <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/dfc.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/3?category=religion">
+                    <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/ivf.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/4?category=religion">
+                    <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/jdm.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/5?category=religion">
+                    <img class="religionSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/religion/veritas.jpg" style="width:100%">
+                </a>
             </div>
         </div>
         
@@ -167,17 +220,31 @@
             <div class="index-intorduce-club-title">
                 <h2>체육분과</h2>
             </div>
-            <div class="w3-content w3-section" style="max-width:400px">
+            <div class="index-introduce-club-img w3-section" style="max-width:400px">
                 <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/physical.jpg" style="width:100%">
-                <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/bowling.jpg" style="width:100%">
-                <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/caps.jpg" style="width:100%">
-                <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/chungmaru.jpeg" style="width:100%">
-                <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/heartbeat.png" style="width:100%">
-                <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/masters.png" style="width:100%">
-                <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/matchpoint.jpg" style="width:100%">
-                <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/synergy.png" style="width:100%">
+                <a href="<%= process.env.SERVER_HOST %>/post/1?category=physical">
+                    <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/bowling.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/2?category=physical">
+                    <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/caps.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/3?category=physical">
+                    <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/chungmaru.jpeg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/4?category=physical">
+                    <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/heartbeat.png" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/5?category=physical">
+                    <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/masters.png" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/6?category=physical">
+                    <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/matchpoint.jpg" style="width:100%">
+                </a>
+                <a href="<%= process.env.SERVER_HOST %>/post/7?category=physical">
+                    <img class="physicalSlides" src="https://import-bucket-s3.s3.ap-northeast-2.amazonaws.com/unionclub/physical/synergy.png" style="width:100%">
+                </a>
             </div>
-    </div>
+        </div>
 
     <!--
         9 - 1600
@@ -191,122 +258,98 @@
     -->
     
     <script>
-    var physicalIndex = 0;
-    var religionIndex = 0;
-    var performanceIndex = 0;
-    var volunteerIndex = 0;
-    var artIndex = 0;
+        var physicalIndex = 0;
+        var religionIndex = 0;
+        var performanceIndex = 0;
+        var volunteerIndex = 0;
+        var artIndex = 0;
 
-    performancecarousel()
-    religioncarousel()
-    artcarousel()
-    volunteercarousel()
-    physicalcarousel()
+        performancecarousel()
+        religioncarousel()
+        artcarousel()
+        volunteercarousel()
+        physicalcarousel()
 
 
     
-    function performancecarousel() {
-        var i;
-        var performance = document.getElementsByClassName('performanceSlides');
-        for (i = 0; i < performance.length; i++) {
-            performance[i].style.display = "none";  
-        }
-        performanceIndex++;
-        if (performanceIndex > performance.length) {performanceIndex = 1}    
-        performance[performanceIndex-1].style.display = "block";
-        setTimeout(performancecarousel, 3000); // Change image every 2 seconds
-    }
+        function performancecarousel() {
+            var i;
+            var performance = document.getElementsByClassName('performanceSlides');
+            for (i = 0; i < performance.length; i++) {
+                performance[i].style.display = "none";  
+            }
 
-    function volunteercarousel() {
-        var i;
-        var volunteer = document.getElementsByClassName('volunteerSlides');
-        for (i = 0; i < volunteer.length; i++) {
-            volunteer[i].style.display = "none";  
+            performanceIndex++;
+            if (performanceIndex > performance.length) {performanceIndex = 1}    
+            performance[performanceIndex-1].style.display = "block";
+            setTimeout(performancecarousel, 3000); // Change image every 2 seconds
         }
-        volunteerIndex++;
-        if (volunteerIndex > volunteer.length) {volunteerIndex = 1}    
-        volunteer[volunteerIndex-1].style.display = "block";
-        setTimeout(volunteercarousel, 3000); // Change image every 2 seconds
-    }
 
-    function artcarousel() {
-        var i;
-        var art = document.getElementsByClassName('artSlides');
-        for (i = 0; i < art.length; i++) {
-            art[i].style.display = "none";  
+        function volunteercarousel() {
+            var i;
+            var volunteer = document.getElementsByClassName('volunteerSlides');
+            for (i = 0; i < volunteer.length; i++) {
+                volunteer[i].style.display = "none";  
+            }
+            volunteerIndex++;
+            if (volunteerIndex > volunteer.length) {volunteerIndex = 1}    
+            volunteer[volunteerIndex-1].style.display = "block";
+            setTimeout(volunteercarousel, 3000); // Change image every 2 seconds
         }
-        artIndex++;
-        if (artIndex > art.length) {artIndex = 1}    
-        art[artIndex-1].style.display = "block";
-        setTimeout(artcarousel, 3000); // Change image every 2 seconds
-    }
 
-    function religioncarousel() {
-        var i;
-        var religion = document.getElementsByClassName('religionSlides');
-        for (i = 0; i < religion.length; i++) {
-            religion[i].style.display = "none";  
+        function artcarousel() {
+            var i;
+            var art = document.getElementsByClassName('artSlides');
+            for (i = 0; i < art.length; i++) {
+                art[i].style.display = "none";  
+            }
+            artIndex++;
+            if (artIndex > art.length) {artIndex = 1}    
+            art[artIndex-1].style.display = "block";
+            setTimeout(artcarousel, 3000); // Change image every 2 seconds
         }
-        religionIndex++;
-        if (religionIndex > religion.length) {religionIndex = 1}    
-        religion[religionIndex-1].style.display = "block";
-        setTimeout(religioncarousel, 3000); // Change image every 2 seconds
-    }
 
-    function physicalcarousel() {
-        var i;
-        var physical = document.getElementsByClassName('physicalSlides');
-        for (i = 0; i < physical.length; i++) {
-            physical[i].style.display = "none";  
+        function religioncarousel() {
+            var i;
+            var religion = document.getElementsByClassName('religionSlides');
+            for (i = 0; i < religion.length; i++) {
+                religion[i].style.display = "none";  
+            }
+            religionIndex++;
+            if (religionIndex > religion.length) {religionIndex = 1}    
+            religion[religionIndex-1].style.display = "block";
+            setTimeout(religioncarousel, 3000); // Change image every 2 seconds
         }
-        physicalIndex++;
-        if (physicalIndex > physical.length) {physicalIndex = 1}    
-        physical[physicalIndex-1].style.display = "block";
-        setTimeout(physicalcarousel, 3000); // Change image every 2 seconds
-    }
+
+        function physicalcarousel() {
+            var i;
+            var physical = document.getElementsByClassName('physicalSlides');
+            for (i = 0; i < physical.length; i++) {
+                physical[i].style.display = "none";  
+            }
+            physicalIndex++;
+            if (physicalIndex > physical.length) {physicalIndex = 1}    
+            physical[physicalIndex-1].style.display = "block";
+            setTimeout(physicalcarousel, 3000); // Change image every 2 seconds
+        }
     </script>
 
-        </div> 
-        <script>
-            // 자동 슬라이드를 구현항 방법은 setInterver을 사용해서 0.1초 동안 반복하게 적용함,
-            // 그리고 timer+1을 하여서 0.1초에 1vw를 이동하게끔 설계 후에 transition을 css에서 사용해서 부드럽게 적용
-            var timer = 0;                
-            let interval = setInterval(slideshow, 2000); 
-        
-            function slideshow(){ 
-                $('.slide-container').css('opacity','1');
-                $('.slide-container').css('transform','translateX(-'+timer+'vw)');
-                timer = timer+20;
-                console.log(timer);
-                if(timer >= 201){
-                    timer = 0;
-                    $('.slide-container').css('transform','translateX(-'+timer+'vw)');
-                    $('.slide-container').css('opacity','0').delay(400);
-                }
-            } 
-        </script> 
-      </div>
-      <div>
-
-      </div>
-    
-            
-        
+    </div> 
         <!-- 마지막 footer부분 이 부분은 메뉴바와 함께 복사 붙여 넣기 꼭 하기 -->
-    <div class="footer">
-      <div class="sns">
-        <ul class="snss">
-          <li><a href="https://www.instagram.com/37th_sketch/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="http://pf.kakao.com/_CxgZub"><img src="../images/kakaoimg.png" width="35px" alt=""></a></li>
-        </ul>
-      </div>
-        <div class="copyright">
-            <p>Copyright 2022. SKETCH all right reserved.</p>
-        </div>
-          <div class="address">
-            <p>대전광역시 유성구 동서대로 125 동아리관 N12동 200호</p>
-          </div>
-      </div>
+        <div class="footer">
+            <div class="sns">
+              <ul class="snss">
+                <li><a href="https://www.instagram.com/37th_sketch/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="http://pf.kakao.com/_CxgZub"><img src="../images/kakaoimg.png" width="35px" alt=""></a></li>
+              </ul>
+            </div>
+              <div class="copyright">
+                  <p>Copyright 2022. SKETCH all right reserved.</p>
+              </div>
+                <div class="address">
+                  <p>대전광역시 유성구 동서대로 125 동아리관 N12동 200호</p>
+                </div>
+            </div>
  
     </body>
 </html>

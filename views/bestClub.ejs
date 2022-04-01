@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>   
+    <title>SKETCH</title>
+    <script src="https://kit.fontawesome.com/4ab7d5f053.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 상단 메뉴 바, 어느 페이지건 다 복사 붙여넣기를 해야함 -->
+    <header>
+      <nav>
+          <div class="menu-button">
+              <i class="fas fa-bars open-menu" onclick="openMenu()"></i>
+              <i class="fas fa-times close-menu" onclick="closeMenu()"></i>
+          </div>
+        <div class="logo">
+            <img src="../images/logo.png" style="cursor: pointer;" onclick="location.href='<%= process.env.SERVER_HOST %>'">
+        </div>
+      <div class="topMenu">
+          <ul class="topMenu-ul">
+            <li><a href="<%= process.env.SERVER_HOST %>/UnionClub">총동아리연합회</a></li>
+            <li><a onclick="OpenSmallMenu(1)">동아리 소개 <span>▼</span></a>
+              <ul id="SmallMenu2">
+                <li><a href="<%= process.env.SERVER_HOST %>/physical">체육분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>/performance">공연분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>/art">전시/교양분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>/volunteer">봉사분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>/religion">종교분과</a></li>
+              </ul>
+              <li><a onclick="OpenSmallMenu(2)">동아리활동<span>▼</span></a>
+                <ul id="SmallMenu1">
+                  <li><a href="<%= process.env.SERVER_HOST %>/document">서류/양식</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>/report">동아리 활동보고</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>/bestClub">이달의 동아리</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>/calender">동아리 캘린더</a></li>
+                </ul>
+              </li>
+            <li><a href="<%= process.env.SERVER_HOST %>/meeting">대표자 회의록</a></li>
+          </ul>
+      </div>
+    </nav>
+  </header>
+    <script>
+        
+        function openMenu(){
+            $('.topMenu').css('display','block');
+            $('.close-menu').css('display','block');
+            $('.open-menu').css('display','none');
+            $('.topMenu-ul').css('background','black');
+            $('.post').css('opacity','0.5');
+            $('.footer').css('opacity','0.5');
+        }
+        function closeMenu(){
+            $('.topMenu').css('display','none');
+            $('.topMenu-ul').css('background','none');
+            $('.close-menu').css('display','none');
+            $('.open-menu').css('display','block');
+            $('.post').css('opacity','1');
+            $('.footer').css('opacity','1');
+            
+        }
+        function OpenSmallMenu(num){
+            var result = '#SmallMenu'+num;
+            $(result).css('dislay','block');
+
+        }
+
+    </script>
+
+    <h1 class="symbol-color"> 이달의 동아리 </h1>
+        <img src="">
+
+
+      
+    <!-- 마지막 footer부분 이 부분은 메뉴바와 함께 복사 붙여 넣기 꼭 하기 -->
+    <div class="footer">
+      <div class="sns">
+        <ul class="snss">
+          <li><a href="https://www.instagram.com/37th_sketch/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="http://pf.kakao.com/_CxgZub"><img src="../images/kakaoimg.png" width="35px" alt=""></a></li>
+        </ul>
+      </div>
+        <div class="copyright">
+            <p>Copyright 2022. SKETCH all right reserved.</p>
+        </div>
+          <div class="address">
+            <p>대전광역시 유성구 동서대로 125 동아리관 N12동 200호</p>
+          </div>
+      </div>
+</body>
+</html>  

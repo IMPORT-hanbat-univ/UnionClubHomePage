@@ -52,7 +52,7 @@
             $('.topMenu').css('display','block');
             $('.close-menu').css('display','block');
             $('.open-menu').css('display','none');
-            $('.topMenu-ul').css('background','black');
+            $('.topMenu-ul').css('background','white');
             $('.contents').css('opacity','0.5');
             $('.footer').css('opacity','0.5');
         }
@@ -93,14 +93,16 @@
                     <!-- 프로젝트 게시물 개별 -> 한번에 6개 보여줌-->
                       <div class="project-card-component">
                             <a class="project-views" href="<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>">
-                              <div style="height: 500px; border-bottom: 1px solid black;">
+                              <div style="height: 550px; border-bottom: 1px solid black;">
                                 <img src="<%=data[i].imgsrc%>" alt="" class="project-thumbnail">
                               </div>
                               <p class="name"><%= data[i].title %></p>
                             </a>
                             <div class="links">
                                 <div class="link-item">
+                                  <a href="<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>">
                                     <p>Go to Page</p>
+                                  </a>
                                 </div>
                             </div>
                       </div>  

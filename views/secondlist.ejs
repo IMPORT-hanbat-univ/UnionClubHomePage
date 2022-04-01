@@ -61,7 +61,7 @@
         $('.topMenu').css('display','block');
         $('.close-menu').css('display','block');
         $('.open-menu').css('display','none');
-        $('.topMenu-ul').css('background','black');
+        $('.topMenu-ul').css('background','white');
         $('.middle-apply').css('opacity','0.5');
         $('.footer').css('opacity','0.5');
     }
@@ -113,11 +113,10 @@
       <p>글제목</p>
     </div>
     <div class="list-top-writer">
-      <p>작성자</p>
+      <p class="list-writer">작성자</p>
       <p>작성일</p>
     </div>
   </div>
-
   <!--
     반복문
   -->
@@ -129,10 +128,10 @@
         </div>
         <div class="list-content-writer">
           <i style="color: #525252;" class="fa-solid fa-file-arrow-down"></i>
-          <p>관리자</p>
+          <p class="list-writer">관리자</p>
           <p><%= data[i].date %></p>
         </div>
-        <i class="fas fa-file-download"></i>
+         <a><i class="fas fa-file-download"></i></a>
       </div>
     <% } %> 
   <% }else{ %>
