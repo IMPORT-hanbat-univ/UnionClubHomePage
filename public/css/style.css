@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&family=Roboto:wght@300&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
 /*홈페이지 기본 css 설정*/
 
 html,body{
@@ -372,7 +373,7 @@ span.pwd {
   margin: auto;
 }
 .unionclub-title{
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   width: 100%;
   max-width: 800px;
   margin: auto;
@@ -384,6 +385,7 @@ span.pwd {
 }
 .unionclub-groupimg img{
   width: 100%;
+  border-radius: 10px;
 }
 
 
@@ -719,7 +721,7 @@ pre {
 
 
 * {
-  font-family: Roboto;
+  font-family: NanumSquare;
 }
 
 a {
@@ -974,7 +976,7 @@ margin-left: 200px;
 }
 
 * {
-  font-family: Roboto;
+  font-family: NanumSquare;
 }
 
 a {
