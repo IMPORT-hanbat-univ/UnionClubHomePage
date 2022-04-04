@@ -98,10 +98,18 @@
     <!--상단 게시판 제목-->
     <div class="post">
         <div class="post-category">
-            <h2><%= data.category %></h2>
+            <h2><%= data.category_kor %></h2>
         </div>
         <div class="post-content-title">
-            <h1><%= data.title %></h1>
+            <h1>
+              <%= data.title %>
+              <% if(data.fileURL == ""){ %>
+                <i class="fas fa-file-download" style="display: none;"></i>
+              <% }else{ %>
+                <a href="<%=data.fileURL%>"><i class="fas fa-file-download"></i></a>
+              <% } %>
+            </h1>
+            
         </div>
         <div class="post-content-info">
             <span>관리자</span>
@@ -116,6 +124,7 @@
             <button id="contentDeleteButton" onclick="showModal()">
                 <i class="far fa-trash-alt"></i>
             </button>
+            
         </div>
        
     

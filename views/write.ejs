@@ -13,7 +13,7 @@
 <body>
   <div class="write-page">
     <div class="write-title">
-      <input style="color:white;" class="back-color" type="text" id="title" placeholder="제목을 입력하세요">
+      <input style="color:black;" class="back-color" type="text" id="title" placeholder="제목을 입력하세요">
     </div>
     <hr>
     <div class="write-menu-bar">
@@ -28,13 +28,7 @@
 
         <button class="back-color" >"</button>
         <button class="back-color symbol-color">링크</button>
-        <button  class="back-color" id="btnImage">
-            <i style="font-size: 20px; z-index: 10;" class="far fa-image">
-            </i>
-              <!-- <input class="image-selector back-color" > -->
-        </button>
-        <input class="image-selector back-color" id="imgSelector" type="file" accept="image/*" hidden="true">
-        <input class="file-selector back-color" id="fileSelector" type="file" accept=".pdf">
+        <input class="file-selector back-color" id="fileSelector" type="file" accept="*">
       </div>
         <div class="write-category">
           <select class="back-color symbol-color" name=category onchange="selectBoxChange(this.value)">
@@ -42,26 +36,21 @@
             <option value="document">서류/양식</option>
             <option value="report">동아리활동보고</option>
           </select>
-          <select id="clubname">
-            <option>동아리명</option>
-          </select>
         </div>
-      
-      <div class="deletePwd">
-        <input class="back-color" id="deletepwd" type="text" placeholder="비밀번호를 입력하시오">
-      </div>
-
     </div>
     
     <div contenteditable="true" class="write-contents" data-text="텍스트를 입력하세요." id="editor"></div>
 
     <div class="write-last-button">
-      <button class="symbol-color back-color">임시저장</button>
+      <button class="symbol-color back-color save-button">임시저장</button>
       <button class="complete-button symbol-color back-color">저장하기</button>
     </div>
   </div>
 </body>
 <script>
+
+  let filesrc = '';
+
   $('#btnBigFont').click(function(){
     changeFont(7);
   });
@@ -83,30 +72,33 @@
   $('#btnImage').click(function(){
     $('#imgSelector').click();
   });
-  $('#imgSelector').change(function(e){
-    const files = e.target.files; 
+  // $('#imgSelector').change(function(e){
+  //   const files = e.target.files; 
 
-    console.log(files);
+  //   console.log(files);
     
-    if (!!files){ 
-      uploadImage(files[0]);  
-    }
-  });
+  //   if (!!files){ 
+  //     uploadImage(files[0]);  
+  //   }
+  // });
 
-  $('#fileSelector').change(function(e){
-    const files = e.target.files; 
-
-    console.log(files);
+  // $('#fileSelector').change(function(e){
+  //   const files = e.target.files; 
+  //   console.log(files)
+  //   if (!!files){ 
+  //     uploadFile(files[0]);
+  //   }
     
-    if (!!files){ 
-      uploadFile(files[0]);  
-    }
-  });
+  // });
+
+  
 
   function uploadImage(file) {
     var formData = new FormData();
 
     formData.append('hwpfile', file);
+
+    console.log(file.location)
 
     $.ajax({
        url: "/file/image",
@@ -115,7 +107,6 @@
        processData: false,
        contentType: false,
        success: function(response) {
-          insertImageData(JSON.parse(response)['location']);
        },
        error: function(jqXHR, textStatus, errorMessage) {
            console.log(errorMessage); // Optional
@@ -134,11 +125,19 @@
        data: formData,
        processData: false,
        contentType: false,
+       success: function(response) {
+          insertImageData(JSON.parse(response)['location']);
+          sendData(JSON.parse(response)['location']);
+
+          filesrc = JSON.parse(response)['location']
+       },
        error: function(jqXHR, textStatus, errorMessage) {
            console.log(errorMessage); // Optional
        }
     });
   }
+  
+  
 
   function setStyle(style) { 
     document.execCommand(style); 
@@ -151,40 +150,94 @@
   function focusEditor() { 
     editor.focus({preventScroll: true}); 
   }
-
-  function insertImageData(url){
-    html = '<img src=\''+url+'\' title=\'image\' />';
-    console.log(url);
-
-      img = "<img src='" + url + "'" + '>';
-
-      focusEditor(); 
-      document.execCommand('insertHTML', false, html); 
-  }
   
   var category = "";
   var selectBoxChange = function(value){
-      console.log(value);
       category = value;
+      console.log(category);
 
   }
-  $('.complete-button').click(function(){
+  
+
+
+  function uploadData(file){
+
+    var formData = new FormData();
+
+    
+
     var title = $('#title').val();
     var content = $('#editor').html();
-    var deletepwd = $('#deletepwd').val();
-    
-    
-    var alldata = {"title" : title, "category" : category, "content": content, "pwd": deletepwd};
+
+   
+   if(typeof file == "undefined"){
+     fielsrc = "0";
+   }else{
+    formData.append('file', file);
+
     $.ajax({
-      type:"POST",
-      url: "/add",
-      data: alldata,
-      dataType: "json",
-      success: function(){
-        console.log("success")
+        url: "/file/file",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+          insertImageData(JSON.parse(response)['location']);
+          console.log('업로드 성공')
+        },
+        error: function(jqXHR, textStatus, errorMessage) {
+            console.log(errorMessage); // Optional
+        }
+    });
+   }
+    setTimeout(() => {
+
+      let now = new Date();
+    
+      var year = now.getFullYear();
+      var writeMonth = now.getMonth();
+      var writeDate = now.getDate();
+    
+      var writeDay = year+'.'+writeMonth+'.'+writeDate;
+      var category_kor = '';
+      if(category == 'document'){
+        category_kor = '서류/양식';
+      }else if(category == 'report'){
+        category_kor = '동아리활동보고';
+      }else if(category == 'meeting'){
+        category_kor = '대표자회의록';
       }
-    })
-  })
+
+      var alldata = {"title" : title, "category" : category, "category_kor":category_kor, "content": content, "date": writeDay, "fileURL": filesrc};
+
+      $.ajax({
+        type:"POST",
+        url: "/add",
+        data: alldata,
+        dataType: "json",
+        success: function(){
+          console.log("success")
+        }
+      })
+    }, 1000);
+   
+  }
+
+  $('.complete-button').click(function(){
+
+    var title = $('#title').val();
+    var userfile = $('#fileSelector')
+    var fileName = userfile[0].files[0]
+    if(category == ""){
+      alert('카테고리를 입력하세요');
+    }else if(title == ""){
+      alert('제목을 입력하세요');
+    }else{
+      uploadData(fileName)
+      history.back();
+    }
+  });
+  
 
   
   

@@ -120,8 +120,9 @@
   <!--
     반복문
   -->
-  <% if(data.length>0){ %>
+  <% if(data.length > 0){ %>
     <% for (var i = 0; i < data.length;i++){ %>
+    <a href='<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>'>
       <div class="list-content-element">
         <div class="list-content-title">
           <p><%= data[i].title %></p>
@@ -131,8 +132,13 @@
           <p class="list-writer">관리자</p>
           <p><%= data[i].date %></p>
         </div>
-         <a><i class="fas fa-file-download"></i></a>
+           <% if(data[i].fileURL == ""){ %>
+            <i class="fas fa-file-download" style="display: none;"></i>
+          <% }else{ %>
+            <a href="<%=data[i].fileURL%>"><i class="fas fa-file-download"></i></a>
+          <% } %>
       </div>
+    </a>
     <% } %> 
   <% }else{ %>
     <script>
