@@ -345,7 +345,7 @@ span.pwd {
     font-size: 30px; 
 }
 .copyright {
-  width: 300px;
+  width: 400px;
   margin: auto;
 }
 
@@ -1316,6 +1316,12 @@ margin-left: 200px;
   margin: auto;
   height: 50px;
   border-bottom: #adadad solid;
+}
+.list-content-element > a{
+  color: #ccc;
+}
+.list-content-element > a:hover{
+  color: #525252;
 }
 .list-content-title{
   float: left;

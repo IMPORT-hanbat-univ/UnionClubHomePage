@@ -99,7 +99,7 @@
 <div class="list">
   <div>
     <div class="list-title">
-      <h1>제목</h1>
+      <h1><%= data[0].category_kor %></h1>
     </div>
     <div class="write-btn">
       <button class="write-button" onclick="showModal()"><i class="far fa-edit"></i></button>
@@ -121,14 +121,13 @@
     반복문
   -->
   <% if(data.length > 0){ %>
-    <% for (var i = 0; i < data.length;i++){ %>
+    <% for (var i = 1; i < data.length;i++){ %>
     <a href='<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>'>
       <div class="list-content-element">
         <div class="list-content-title">
           <p><%= data[i].title %></p>
         </div>
         <div class="list-content-writer">
-          <i style="color: #525252;" class="fa-solid fa-file-arrow-down"></i>
           <p class="list-writer">관리자</p>
           <p><%= data[i].date %></p>
         </div>
