@@ -23,24 +23,24 @@
         </div>
       <div class="topMenu">
           <ul class="topMenu-ul">
-            <li><a href="<%= process.env.SERVER_HOST %>/UnionClub">총동아리연합회</a></li>
+            <li><a href="<%= process.env.SERVER_HOST %>UnionClub">총동아리연합회</a></li>
             <li><a onclick="OpenSmallMenu(1)">동아리 소개 <span>▼</span></a>
               <ul id="SmallMenu2">
-                <li><a href="<%= process.env.SERVER_HOST %>/physical">체육분과</a></li>
-                <li><a href="<%= process.env.SERVER_HOST %>/performance">공연분과</a></li>
-                <li><a href="<%= process.env.SERVER_HOST %>/art">전시/교양분과</a></li>
-                <li><a href="<%= process.env.SERVER_HOST %>/volunteer">봉사분과</a></li>
-                <li><a href="<%= process.env.SERVER_HOST %>/religion">종교분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>physical">체육분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>performance">공연분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>art">전시/교양분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>volunteer">봉사분과</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>religion">종교분과</a></li>
               </ul>
               <li><a onclick="OpenSmallMenu(2)">동아리활동<span>▼</span></a>
                 <ul id="SmallMenu1">
-                  <li><a href="<%= process.env.SERVER_HOST %>/document">서류/양식</a></li>
-                  <li><a href="<%= process.env.SERVER_HOST %>/report">동아리 활동보고</a></li>
-                  <li><a href="<%= process.env.SERVER_HOST %>/bestClub">이달의 동아리</a></li>
-                  <li><a href="<%= process.env.SERVER_HOST %>/calender">동아리 캘린더</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>document">서류/양식</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>report">동아리 활동보고</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>bestClub">이달의 동아리</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>calender">동아리 캘린더</a></li>
                 </ul>
               </li>
-            <li><a href="<%= process.env.SERVER_HOST %>/meeting">대표자 회의록</a></li>
+            <li><a href="<%= process.env.SERVER_HOST %>meeting">대표자 회의록</a></li>
           </ul>
       </div>
     </nav>
@@ -96,6 +96,9 @@
 
 
     <!--상단 게시판 제목-->
+    <script>
+      console.log(locals.data.fileURL);
+    </script>
     <div class="post">
         <div class="post-category">
             <h2><%= data.category_kor %></h2>
@@ -103,11 +106,14 @@
         <div class="post-content-title">
             <h1>
               <%= data.title %>
-              <% if(data.fileURL == ""){ %>
+              
+              <% if(typeof(data.fileURL) === 'string'){ %>
+                <a href="<%=data.fileURL%>"><i class="fas fa-file-download"></i></a>
+              <% }else if(data.fileURL == ""){ %>
                 <i class="fas fa-file-download" style="display: none;"></i>
               <% }else{ %>
-                <a href="<%=data.fileURL%>"><i class="fas fa-file-download"></i></a>
-              <% } %>
+                <i class="fas fa-file-download" style="display: none;"></i>
+              <%} %>
             </h1>
             
         </div>
@@ -144,7 +150,7 @@
             url : '/delete',//요청할 경로
             data : alldata//요청과 함께 보낼 데이터, 게시물 번호, 현재 내가 클릭한 버튼의 id를 여기에 넣기
           }).done(function(resu){
-            window.location.href = '<%= process.env.SERVER_HOST %>/'+category
+            window.location.href = '<%= process.env.SERVER_HOST %>'+category
         }).fail(function(xhr, textStatus, errorThorown){
           //실패시 실행
           console.log(xhr, textStatus, errorThorown);
@@ -189,9 +195,7 @@
             </div>
             
         </div>
-        <script>
-          consloe.log(id)
-        </script>
+        
 
         <div class="other-contents">
             <button class="prev-content-button" type="button">

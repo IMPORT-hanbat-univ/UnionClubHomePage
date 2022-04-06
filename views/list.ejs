@@ -24,24 +24,24 @@
           </div>
         <div class="topMenu">
             <ul class="topMenu-ul">
-              <li><a href="<%= process.env.SERVER_HOST %>/UnionClub">총동아리연합회</a></li>
+              <li><a href="<%= process.env.SERVER_HOST %>UnionClub">총동아리연합회</a></li>
               <li><a onclick="OpenSmallMenu(1)">동아리 소개 <span>▼</span></a>
                 <ul id="SmallMenu2">
-                  <li><a href="<%= process.env.SERVER_HOST %>/physical">체육분과</a></li>
-                  <li><a href="<%= process.env.SERVER_HOST %>/performance">공연분과</a></li>
-                  <li><a href="<%= process.env.SERVER_HOST %>/art">전시/교양분과</a></li>
-                  <li><a href="<%= process.env.SERVER_HOST %>/volunteer">봉사분과</a></li>
-                  <li><a href="<%= process.env.SERVER_HOST %>/religion">종교분과</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>physical">체육분과</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>performance">공연분과</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>art">전시/교양분과</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>volunteer">봉사분과</a></li>
+                  <li><a href="<%= process.env.SERVER_HOST %>religion">종교분과</a></li>
                 </ul>
                 <li><a onclick="OpenSmallMenu(2)">동아리활동<span>▼</span></a>
                   <ul id="SmallMenu1">
-                    <li><a href="<%= process.env.SERVER_HOST %>/document">서류/양식</a></li>
-                    <li><a href="<%= process.env.SERVER_HOST %>/report">동아리 활동보고</a></li>
-                    <li><a href="<%= process.env.SERVER_HOST %>/bestClub">이달의 동아리</a></li>
-                    <li><a href="<%= process.env.SERVER_HOST %>/calender">동아리 캘린더</a></li>
+                    <li><a href="<%= process.env.SERVER_HOST %>document">서류/양식</a></li>
+                    <li><a href="<%= process.env.SERVER_HOST %>report">동아리 활동보고</a></li>
+                    <li><a href="<%= process.env.SERVER_HOST %>bestClub">이달의 동아리</a></li>
+                    <li><a href="<%= process.env.SERVER_HOST %>calender">동아리 캘린더</a></li>
                   </ul>
                 </li>
-              <li><a href="<%= process.env.SERVER_HOST %>/meeting">대표자 회의록</a></li>
+              <li><a href="<%= process.env.SERVER_HOST %>meeting">대표자 회의록</a></li>
             </ul>
         </div>
       </nav>
@@ -92,7 +92,7 @@
                     <% for (var i = 1; i < data.length;i++){ %>
                     <!-- 프로젝트 게시물 개별 -> 한번에 6개 보여줌-->
                       <div class="project-card-component">
-                            <a class="project-views" href="<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>">
+                            <a class="project-views" href="<%= process.env.SERVER_HOST %>post/<%=data[i]._id%>?category=<%=data[0].category%>">
                               <div style="height: 550px; border-bottom: 1px solid black;">
                                 <img src="<%=data[i].imgsrc%>" alt="" class="project-thumbnail">
                               </div>
@@ -100,7 +100,7 @@
                             </a>
                             <div class="links">
                                 <div class="link-item">
-                                  <a href="<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>">
+                                  <a href="<%= process.env.SERVER_HOST %>post/<%=data[i]._id%>?category=<%=data[0].category%>">
                                     <p>Go to Page</p>
                                   </a>
                                 </div>

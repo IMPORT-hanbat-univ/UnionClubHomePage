@@ -1426,6 +1426,7 @@ margin-left: 200px;
     width: 400px;
     height: 50px;
     top: 20px;
+    left: 50px;
     z-index: 1;
   }
   
@@ -1634,12 +1635,12 @@ margin-left: 200px;
     font-size: 30px; 
   }
   .copyright {
-    width: 300px;
+    width: 400px;
     margin: auto;
   }
 
   .address {
-    width: 360px;
+    width: 400px;
     color: #a3bcdf;
     margin: auto;
   }
@@ -1900,13 +1901,13 @@ margin-left: 200px;
   .list-content-title{
     float: left;
     margin-left: 5%;
-    width: 50%;
+    width: 60%;
     
   }
   .list-content-writer{
     margin-left: 5%;
     float: left;
-    width: 40%;
+    width: 30%;
   }
   .list-content-writer .list-writer{
     display: none;
@@ -1929,8 +1930,19 @@ margin-left: 200px;
   .list-content-element i:hover{
     cursor: pointer;
   }
+  /************************************/
+  /*            캘린더                  */
+  /************************************/
+  .calender-title{
+    margin-top: 50px;
+  }
 
-
+  /************************************/
+  /*            이달의 동아리            */
+  /************************************/
+  .bestclub-title{
+    margin-top: 50px;
+  }
 
 }
 
