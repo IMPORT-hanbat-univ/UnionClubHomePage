@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="../fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link href="../css/style.css" rel="stylesheet">
   <title>SKETCH</title>
 </head>
@@ -22,30 +23,30 @@
       </div>
     <div class="topMenu">
         <ul class="topMenu-ul">
-          <li><a href="<%= process.env.SERVER_HOST %>/UnionClub">총동아리연합회</a></li>
+          <li><a href="<%= process.env.SERVER_HOST %>UnionClub">총동아리연합회</a></li>
           <li><a onclick="OpenSmallMenu(1)">동아리 소개 <span>▼</span></a>
             <ul id="SmallMenu2">
-              <li><a href="<%= process.env.SERVER_HOST %>/physical">체육분과</a></li>
-              <li><a href="<%= process.env.SERVER_HOST %>/performance">공연분과</a></li>
-              <li><a href="<%= process.env.SERVER_HOST %>/art">전시/교양분과</a></li>
-              <li><a href="<%= process.env.SERVER_HOST %>/volunteer">봉사분과</a></li>
-              <li><a href="<%= process.env.SERVER_HOST %>/religion">종교분과</a></li>
+              <li><a href="<%= process.env.SERVER_HOST %>physical">체육분과</a></li>
+              <li><a href="<%= process.env.SERVER_HOST %>performance">공연분과</a></li>
+              <li><a href="<%= process.env.SERVER_HOST %>art">전시/교양분과</a></li>
+              <li><a href="<%= process.env.SERVER_HOST %>volunteer">봉사분과</a></li>
+              <li><a href="<%= process.env.SERVER_HOST %>religion">종교분과</a></li>
             </ul>
             <li><a onclick="OpenSmallMenu(2)">동아리활동<span>▼</span></a>
               <ul id="SmallMenu1">
-                <li><a href="<%= process.env.SERVER_HOST %>/document">서류/양식</a></li>
-                <li><a href="<%= process.env.SERVER_HOST %>/report">동아리 활동보고</a></li>
-                <li><a href="<%= process.env.SERVER_HOST %>/bestClub">이달의 동아리</a></li>
-                <li><a href="<%= process.env.SERVER_HOST %>/calender">동아리 캘린더</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>document">서류/양식</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>report">동아리 활동보고</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>bestClub">이달의 동아리</a></li>
+                <li><a href="<%= process.env.SERVER_HOST %>calender">동아리 캘린더</a></li>
               </ul>
             </li>
-          <li><a href="<%= process.env.SERVER_HOST %>/meeting">대표자 회의록</a></li>
+          <li><a href="<%= process.env.SERVER_HOST %>meeting">대표자 회의록</a></li>
         </ul>
     </div>
   </nav>
 </header>
 <script>
-  function showModal() {
+      function showModal() {
             var modal = document.getElementById("Modal");
             modal.style.display = "block";
             $('body').css('background-color','rgba(0,0,0,0.4)')
@@ -86,7 +87,7 @@
  <div id="Modal" class="modal">
   <form class="modal-content animate" id="writeForm" action="/write" method="post">
       <div class="xcontainer">
-          <span onclick="document.getElementById('Modal').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <span onclick="closeModal()" class="close" title="Close Modal">&times;</span>
       </div>
 
       <div class="modalContainer">
@@ -122,7 +123,7 @@
   -->
   <% if(data.length > 0){ %>
     <% for (var i = 1; i < data.length;i++){ %>
-    <a href='<%= process.env.SERVER_HOST %>/post/<%=data[i]._id%>?category=<%=data[0].category%>'>
+    <a href='<%= process.env.SERVER_HOST %>post/<%=data[i]._id%>?category=<%=data[0].category%>'>
       <div class="list-content-element">
         <div class="list-content-title">
           <p><%= data[i].title %></p>
