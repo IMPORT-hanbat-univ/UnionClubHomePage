@@ -35,7 +35,6 @@ var meetingRouter = require('./routes/meeting');
 // 게시글
 var postRouter = require('./routes/post');
 // 게시글 작성
-var writeRouter = require('./routes/write');
 // db 업로드
 var addRouter = require('./routes/add');
 // 게시글 삭제
@@ -43,7 +42,6 @@ var deleteRouter = require('./routes/delete');
 // 게시글 수정
 var editRouter = require('./routes/edit');
 // 파일 업로드
-var fileRouter = require('./routes/file');
 
 
 var app = express();
@@ -72,11 +70,9 @@ app.use('/bestClub', bestClubRouter);
 app.use('/calender', calenderRouter);
 app.use('/meeting', meetingRouter);
 app.use('/post', postRouter);
-app.use('/write', writeRouter);
 app.use('/add', addRouter);
 app.use('/delete', deleteRouter);
 app.use('/edit', editRouter);
-app.use('/file', fileRouter);
 
 
 // catch 404 and forward to error handler
